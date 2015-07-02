@@ -1,0 +1,12 @@
+{
+    "author": "Fulfil.IO Inc.",
+    "email": "info@fulfil.io",
+    "website": "http://www.fulfil.io/",
+    "module_name": "module_name",
+    "module_prefix": "trytond",
+    "description": "",
+    "licence": "BSD",
+    "repo_name": "module-name",
+    "version": "3.4.0.1",
+    "year": "2015"
+}

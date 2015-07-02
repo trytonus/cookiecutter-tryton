@@ -1,0 +1,5 @@
+[run]
+source = trytond.modules.{{ cookiecutter.module_name }}
+
+[report]
+omit = */tests/*, */setup.py
