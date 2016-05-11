@@ -21,7 +21,7 @@ class TestViewsDepends(unittest.TestCase):
         Set up data used in the tests.
         this method is called before each test function execution.
         """
-        trytond.tests.test_tryton.install_module('{{ cookiecutter.module_name}}')
+        trytond.tests.test_tryton.install_module('{{ cookiecutter.module_name}}')  # noqa
 
     def test0005views(self):
         '''
