@@ -8,32 +8,12 @@
 import unittest
 
 import trytond.tests.test_tryton
-from trytond.tests.test_tryton import test_view, test_depends
+from trytond.tests.test_tryton import ModuleTestCase
 
 
-class TestViewsDepends(unittest.TestCase):
-    '''
-    Test views and depends
-    '''
-
-    def setUp(self):
-        """
-        Set up data used in the tests.
-        this method is called before each test function execution.
-        """
-        trytond.tests.test_tryton.install_module('{{ cookiecutter.module_name}}')  # noqa
-
-    def test0005views(self):
-        '''
-        Test views.
-        '''
-        test_view('{{ cookiecutter.module_name }}')
-
-    def test0006depends(self):
-        '''
-        Test depends.
-        '''
-        test_depends()
+class TestViewsDepends(ModuleTestCase):
+    """Test View Depends."""
+    module = '{{ cookiecutter.module_name }}'
 
 
 def suite():
@@ -45,6 +25,7 @@ def suite():
         unittest.TestLoader().loadTestsFromTestCase(TestViewsDepends)
     )
     return test_suite
+
 
 if __name__ == '__main__':
     unittest.TextTestRunner(verbosity=2).run(suite())
